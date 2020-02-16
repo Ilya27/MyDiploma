@@ -1,0 +1,29 @@
+.DogWalkerBack {
+    display: flex;
+    max-width: 800px;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.DogWalkerBackWrap h3 {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.DogWalkerBackItem {
+    max-width: 350px;
+    text-align: left;
+    padding: 20px;
+}
+
+.DogWalkerBackItem p {
+    font-size: 14px;
+    color: #7F7291;
+}
+
+
+.DogWalkerBackItem img{
+    max-width: 40px;
+}

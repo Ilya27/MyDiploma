@@ -1,0 +1,20 @@
+.FooterTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.ListLearnMore {
+    display: flex;
+    flex-direction: column;
+}
+.ListCities {
+    display: flex;
+    justify-content: space-around;
+    min-width: 60%;
+}
+
+.span {
+    color: transparent;
+}

@@ -1,0 +1,19 @@
+.account {
+	text-align: center;
+}
+
+.h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 20px auto;
+}
+
+.avatar {
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+	max-width: 50px;
+	max-height: 50px;
+}

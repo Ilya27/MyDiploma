@@ -1,0 +1,145 @@
+.flexwrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.walker {
+	max-width: 1100px;
+	margin: 20px auto;
+	background-color: white;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.avatar-wrapper {
+	text-align: center;
+}
+
+.avatar {
+	width: 100px;
+	height: 100px;
+}
+
+.info-wrapper {
+	text-align: center;
+}
+
+.ModalWrap input {
+	padding: 5px;
+	font-size: 14px;
+}
+
+.h1 {
+	margin: 0;
+	font-size: 30px;
+}
+
+.h2 {
+	margin: 0;
+	font-size: 20px;
+}
+
+.h3 {
+	margin: 0;
+	color: gray;
+	font-size: 16px;
+}
+
+.btn {
+	background-color: #14a96d;
+	color: white;
+	padding: 10px 16px;
+	border: none;
+    border-radius: 4px;
+	margin: 15px 0;
+	cursor: pointer;
+}
+
+.services-wrapper {
+	width: 90%;
+	margin: 0 auto 20px;
+	padding: 10px 20px;
+	background-color: #f4f5f6;
+	border-radius: 8px;
+}
+
+.h4 {
+	margin: 0;
+	font-size: 25px;
+	color: gray;
+}
+
+.h5 {
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.description {
+	margin: 0;
+}
+
+.salary {
+	font-size: 25px;
+	display: flex;
+	justify-content: flex-end;
+	margin: 0;
+	font-weight: 700;
+}
+
+.size-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.ButtonOrderComplete {
+	display: inline-block;
+}
+.ButtonOrderComplete button {
+	background: #14A96D;
+	border: 1px#14A96D;
+	border-radius: 3px;
+	color: #fff;
+	padding: 5px 10px;
+}
+
+.ButtonOrderComplete button:hover {
+	background: #11925E;
+	cursor: pointer;
+}
+
+.ModalWrap {
+	background-color: #fff;
+	max-width: 300px;
+	padding: 20px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	border: 1px solid green;
+}
+
+@media (min-width: 768px) {
+	.walker-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 20px;
+	}
+
+	.avatar {
+		width: 200px;
+		height: 200px;
+	}
+
+	.info-wrapper {
+		width: calc(100% - 220px);
+		text-align: left;
+	}
+
+	.size-wrapper {
+		justify-content: space-around;
+	}
+}

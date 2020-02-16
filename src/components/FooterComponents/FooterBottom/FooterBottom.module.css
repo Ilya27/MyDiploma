@@ -1,0 +1,12 @@
+.FooterBottom {
+    display: flex;
+    justify-content: center;
+    background-color: #F8F8F8;
+    padding: 10px 20px;
+}
+
+.FooterBottom small{
+    text-align: center;
+    color: #a5a5c1;
+    font-size: 12px;
+}

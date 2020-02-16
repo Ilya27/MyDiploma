@@ -1,0 +1,54 @@
+.signup {
+	width: 100%;
+	text-align: center;
+	background-color: white;
+	margin-bottom: 20px;
+}
+
+.h1-registration {
+	text-align: center;
+	margin-top: 0;
+}
+
+.signup-wrapper {
+	width: 100%;
+	max-width: 220px;
+	margin: 0 auto;
+}
+
+.h6-registration {
+	text-align: center;
+	font-size: 16px;
+	margin: 0 0 15px;
+	font-weight: 400;
+}
+
+.sign-info {
+	margin: 0 auto;
+	font-size: 12px;
+	max-width: 70%;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cfd7de;
+}
+
+.have-account {
+	font-size: 15px;
+}
+
+@media (min-width: 768px) {
+	.signup {
+		max-width: 500px;
+		margin: 20px auto;
+		border-radius: 2px;
+		padding: 30px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, .5)
+	}
+
+	.sign-info {
+		font-size: 14px;
+	}
+
+	.have-account {
+		font-size: 16px;
+	}
+}

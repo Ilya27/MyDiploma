@@ -1,0 +1,32 @@
+.TreatYourDog {
+    padding: 20px;
+    text-align: center;
+}
+
+.TreatYourDog h3{
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+.TreatYourDog h5{
+    font-size: 14px;
+    color:#66727C
+}
+
+.TreatYourDog ul {
+    font-size: 14px;
+    max-width: 380px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.TreatYourDog a {
+    color: #06748a;
+    text-decoration: none;
+}
+
+.TreatYourDog a:hover {
+    color: black;
+    text-decoration-line: underline;
+}

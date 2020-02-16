@@ -1,0 +1,15 @@
+.btn {
+	border: none;
+	background: transparent;
+	outline: none;
+	color: #66727c;
+	cursor: pointer;
+	padding: 4px 6px;
+	font-size: 15px;
+}
+
+@media (min-width: 768px) {
+	.btn {
+		color: #00bd70;
+	}
+}

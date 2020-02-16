@@ -1,0 +1,29 @@
+.HeaderDoggyDay {
+    background: url('../../../images/header-doggy-day-care-background.jpg') center center / cover no-repeat;
+    min-height: 100vh;
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+}   
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.headerButton {
+    color:#fff;
+    text-decoration: none;
+    background: #14A96D;
+    display: inline-block;
+    font-size: 13px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.headerButton:hover {
+    background: #11925E;
+} 

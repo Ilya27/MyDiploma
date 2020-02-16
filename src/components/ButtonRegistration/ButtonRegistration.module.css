@@ -1,0 +1,13 @@
+.btn-registration {
+	margin-bottom: 15px;
+	font-weight: 500;
+	font-size: 14px;
+	min-height: 40px;
+	padding: 8px 16px;
+	text-align: center;
+	width: 100%;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	background-color: white;
+	cursor: pointer;
+}

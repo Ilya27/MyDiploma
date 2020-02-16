@@ -1,0 +1,39 @@
+    
+.centerBlockListCities {
+    margin: 0 auto;
+    max-width: 1150px;    
+}
+
+
+.ListCities {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.ListCities li{
+    list-style: none;
+    text-align: left;
+}
+
+.ListCities ul {
+    padding: 0;
+    min-width: 140px;
+}
+
+.ListCities a{
+    text-decoration: none;
+    color:  #06748a;
+    font-size: 13px;
+}
+
+.ListCities a:hover{
+    text-decoration-line: underline;
+    color: black;
+}
+
+.headerListCities {
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: center;
+}

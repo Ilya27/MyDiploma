@@ -1,0 +1,17 @@
+.menu-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	color: #00bd70;
+	font-size: 25px;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.menu-icon {
+		display: none;
+	}
+}

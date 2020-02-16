@@ -1,0 +1,35 @@
+.CreditCardValidation {
+    margin: 0 auto;
+    max-width: 400px;
+    min-height: 200px;
+    background: #fff;
+    padding: 20px;
+}
+
+.CreditCardValidation h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.CreditCardValidation p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.MaskCVC {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: top;
+}
+.paymentLabel>i {
+    font-size: 48px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+.wrong {
+    color: red;
+    font-weight: bold;
+}

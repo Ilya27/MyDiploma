@@ -1,0 +1,53 @@
+.profile-image-change-wrapper {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 20px auto;
+}
+
+.avatar {
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 10px;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    color: white;
+	background-color: #14a96d;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 4px;
+	display: inline-block;
+	width: 50%;
+	cursor: pointer;
+	margin: 0 15px 20px 0;
+	font-size: 14px;
+}
+
+.btn {
+	width: 100%;
+	background-color: #14a96d;
+	color: white;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 4px;
+	margin-bottom: 15px;
+	cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.NoKennelsList {
+    padding: 20px;
+    text-align:center;
+}
+
+.NoKennelsList h3{
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+.NoKennelsList ul {
+    max-width: 600px;
+    text-align: left;
+    font-size: 15px;
+    margin: 0 auto;
+}
+.NoKennelsList p {
+    color: #555;
+}

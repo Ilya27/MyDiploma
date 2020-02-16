@@ -1,0 +1,69 @@
+.searchFormContainer {
+  background-color: white;
+}
+.searchSittersFormBox{
+  width: 320px;
+  box-sizing: border-box;
+  display: block;
+  padding: 5px;
+  margin-left: 10px;
+}
+.dogSizeAndWeights{
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+}
+.buttonsBox{
+  text-align: center;
+}
+.buttonsBox label{
+  text-align: left;
+
+}
+.sliderRangeInputContainer{
+  margin: 5px;
+  padding: 5px;
+  width: 90%;
+  color: #14a96d;
+}
+.datePickerField{
+  width: 98%
+}
+.daysOfTheWeekBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.submitButton{
+  display: block;
+  width: 95%;
+  background: #14a96d;
+  border-color: #14a96d;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 8px 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+.submitButton:hover {
+  background-color: #11925e;
+}
+.submitButton:focus{
+  outline: 0;
+}
+
+.dogSizes {
+  width: calc(50% - 2px )
+}
+
+@media (max-width: 768px) and (min-width: 300px){
+    .searchSittersFormBox{
+        width: 100%;
+  }
+}

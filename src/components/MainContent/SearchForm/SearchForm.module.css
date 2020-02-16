@@ -1,0 +1,168 @@
+
+.searchFormContainer{
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 850px;
+  box-sizing: border-box;
+  color: #1b1f23;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+.searchFormBox{
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 15px 25px;
+  box-sizing: border-box;
+}
+.petType{
+  background-color: #f4f5f6;
+  display: flex;
+  padding: 15px 30px 0;
+  margin: -15px -25px 0;
+  border-radius: inherit;
+  font-weight: 700;
+  text-align: center;
+}
+.submitButton:hover {
+  background-color: #11925e;
+}
+.submitButton:focus{
+  outline: 0;
+}
+.buttonsBox {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: 10px;
+  height: calc(100% - 22px)
+}
+.dogAwayButtonsDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+.dogAtWorkButtonsDiv{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.cityInputAndDatePicker{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  margin-bottom: 10px;
+}
+
+.datePickerField{
+  box-sizing: border-box;
+  height: 40px;
+}
+.datePickerField label{
+  position: relative;
+  min-height: 1px;
+  color: #40484f;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+
+}
+.lastField{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+.dogSizeAndWeights{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.dogSizeAndWeights div{
+  text-align: center;
+  width: 95%;
+}
+.submitButton{
+  display: block;
+  width: 100%;
+  background: #14a96d;
+  border-color: #14a96d;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid;
+  padding: 8px 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+.cityInputAndRegularity{
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  grid-template-areas:
+   'cityInputContainer oftenNeedServiceContainer'
+   'datePickerField2 datePickerField2'
+   'daysOfTheWeekAndDatePickerOneFieldContainer daysOfTheWeekAndDatePickerOneFieldContainer';
+}
+.cityInputContainer{
+  grid-area: cityInputContainer;
+}
+.oftenNeedServiceContainer{
+  grid-area: oftenNeedServiceContainer;
+}
+.datePickerField2{
+  grid-area: datePickerField2;
+}
+.datePickerOneField>label{
+  margin-bottom: 15px;
+}
+.oftenNeedService{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.daysOfTheWeekBox{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-right: 20px;
+}
+.daysOfTheWeek div{
+  text-align: center;
+  width: 100%;
+}
+.daysOfTheWeek{
+
+  border-radius: 0px;
+}
+
+.daysOfTheWeekAndDatePickerOneFieldContainer{
+  grid-area: daysOfTheWeekAndDatePickerOneFieldContainer;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.daysOfTheWeek  label {
+	height: 40px;
+}
+
+
+@media (max-width: 768px) and (min-width: 300px){
+  .buttonsBox, .cityInputAndDatePicker, .lastField, .cityInputAndRegularity, .daysOfTheWeekAndDatePickerOneFieldContainer, .oftenNeedServiceContainer {
+    display: block;
+    font-size: 12px;
+
+  }
+  .lastField{
+    margin-top: 40px;
+  }
+  .lastField label{
+    font-size: 12px;
+  }
+  .daysOfTheWeekBox{
+    margin-right: 5px;
+  }
+
+
+}

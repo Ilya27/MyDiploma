@@ -1,0 +1,48 @@
+.datePickerField{
+  display: flex;
+  position: relative;
+  max-height: 40px;
+  margin-bottom: 10px;
+}
+.dayColor-disabled {
+  color: #ccc;
+}
+.datePicker {
+  color: #00bd70;
+  border: 1px solid #cfd7de;
+  border-radius: 4px;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  display: block;
+}
+.datePickerFieldWrapper, .datePickerFieldWrapper>div, .datePickerFieldWrapper>div>div {
+  display: block;
+  width: 100%;
+  background-color: white
+}
+
+.datePickerFieldWrapper>div >div>div{
+  float:none;
+}
+
+.calcIcon {
+    position: relative;
+    z-index: 1;
+    left: -25px;
+    top: 5px;
+    cursor:pointer;
+    width: 0;
+    font-size: calc(100%);
+    color: #cfd7de;
+
+}
+.calcIcon{
+
+}
+.dayColor{
+  color:  green;
+  font-size: 14px;
+}

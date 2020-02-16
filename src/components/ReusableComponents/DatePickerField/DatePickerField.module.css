@@ -1,0 +1,72 @@
+.datePickerField{
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  max-height: 40px;
+  margin-bottom: 10px;
+}
+.dayColor-disabled {
+  color: #ccc;
+}
+
+.datePicker {
+  color: #00bd70;
+  border: 1px solid #cfd7de;
+  border-radius: 4px;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  height: 40px;
+  display: block;
+}
+ .testClass,.testClass >div,  .testClass >div >div{
+  display: block ;
+  width: 100%;
+  background-color: white;
+  max-width: 365px;
+}
+.testClass >div >div>div{
+  float:none;
+}
+
+.react-datepicker-wrapper div{
+  display: block ;
+  width: 100%;
+}
+
+.arrow{
+  color: rgb(207, 215, 222);
+  display: block;
+  font-size: 18px;
+  height: 21.8182px;
+  line-height: 22.4px;
+  margin-right: 22px;
+  margin-top: 15px;
+}
+
+.calcIcon {
+    position: relative;
+    z-index: 1;
+    left: -30px;
+    top: 10px;
+    cursor:pointer;
+    width: 0;
+    font-size: 14px;
+    color: #cfd7de;
+}
+
+.dayColor {
+  color:  #00bd70;
+  font-size: 14px;
+}
+.dayColor-disabled {
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+	.datePickerField {
+		width: 98%
+	}
+}

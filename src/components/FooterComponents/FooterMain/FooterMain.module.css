@@ -1,0 +1,8 @@
+.FooterMain {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 37px;
+    padding: 0px 20px;
+}

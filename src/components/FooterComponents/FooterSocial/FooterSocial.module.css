@@ -1,0 +1,95 @@
+.FooterSocial {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 40px;
+}
+
+.FooterSocial p {
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #515151;
+    line-height: 18px;
+    margin:0;
+}
+
+.FooterSocial a {
+    text-decoration: none;
+}
+
+.FooterSocial p:hover > span {
+  text-decoration-line: underline;
+}
+.FooterSocial p span{
+    font-size: 12px;
+    font-weight: normal;
+    text-transform: lowercase;
+    color: #66727C;
+    text-decoration: none;
+}
+
+.social_description {
+  margin-right: 25px;
+}
+
+.social_links {
+  padding-top: 10px;
+}
+
+.link_facebook {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #3B5998;
+  }
+
+  .link_instagram {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #8A3AB9;
+  }  
+
+  .link_twitter {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #1DA2F2;
+  }    
+
+  .link_pinterest {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 15px;
+    background: #C8232C;
+  }    

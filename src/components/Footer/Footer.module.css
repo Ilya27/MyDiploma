@@ -1,0 +1,14 @@
+.Footer {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    background-color: #fff;
+    align-items: stretch;
+    padding-top: 50px;
+}
+
+.Footer_cont {
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 100%;
+}

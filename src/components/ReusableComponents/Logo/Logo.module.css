@@ -1,0 +1,9 @@
+.logo-wrapper {
+	display: inline-block;
+}
+
+.logo {
+	text-decoration: none;
+	color: #00bd70;
+	font-size: 25px;
+}
