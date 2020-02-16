@@ -5,15 +5,6 @@ import ServicesForEveryDogAndCat from './ServicesForEveryDogAndCat/ServicesForEv
 import HowItWorks from './HowItWorks/HowItWorks';
 
 
-// import {
-//   SafeAreaView,
-//   TextInput,
-//   Button,
-//   ActivityIndicator,
-// } from 'react-native';
-
-
-
 const MainContent =(props)=>{
   return(
     <div>

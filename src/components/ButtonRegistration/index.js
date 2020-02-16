@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import classes from './ButtonRegistration.module.css';
 import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classes from './ButtonRegistration.module.css';
 
 class ButtonRegistration extends Component {
 	render() {

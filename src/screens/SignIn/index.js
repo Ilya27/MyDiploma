@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-import classes from './SignIn.module.css';
-
+import { toast } from 'react-toastify';
 import { Formik, Form } from "formik";
 import { SignInSchema } from '../../config/yupConfig';
-
 import SignInFacebook from '../../components/SignInFacebook';
 import DefaultInput from '../../components/ReusableComponents/DefaultInput';
 import PasswordInput from '../../components/ReusableComponents/PasswordInput';
-
 import { SignUpLink } from '../Registration';
 import { PasswordForgetLink } from '../PasswordForget';
-import { withRouter } from 'react-router-dom';
+import classes from './SignIn.module.css';
 
-import { withFirebase } from '../../config/Firebase';
 
-import { toast } from 'react-toastify';
-
-class SignInBase extends Component {	
+class SignIn extends Component {	
 	render() {
 		return (
 			<div className={classes["signin-form-holder"]}>
@@ -31,7 +25,6 @@ class SignInBase extends Component {
 						}}
 						validationSchema={SignInSchema}
 						onSubmit={( values, { resetForm } ) => {
-							// console.log(values)
 							this.props.firebase
 								.doSignInWithEmailAndPassword(values.email, values.password)
 									.then(() => {
@@ -66,7 +59,5 @@ class SignInBase extends Component {
 		)
 	}
 }
-
-const SignIn = withRouter(withFirebase(SignInBase))
 
 export default SignIn;

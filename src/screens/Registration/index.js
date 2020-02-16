@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import classes from './Registration.module.css';
 import { Formik, Form } from "formik";
 import { RegistrationSchema } from '../../config/yupConfig';
-import { Link, withRouter } from 'react-router-dom';
-
-import { compose } from 'recompose';
-import { withFirebase } from '../../config/Firebase';
-
+import { Link } from 'react-router-dom';
 import Checkbox from '../../components/ReusableComponents/Checkbox';
 import DefaultInput from '../../components/ReusableComponents/DefaultInput';
 import PasswordInput from '../../components/ReusableComponents/PasswordInput';
@@ -16,7 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { toast } from 'react-toastify';
 
-class RegistrationBase extends Component {
+class Registration extends Component {
 	state = {
 		imageSrc: ''
 	}
@@ -147,11 +143,6 @@ class RegistrationBase extends Component {
 		)
 	}
 }
-
-const Registration = compose(
-	withRouter,
-	withFirebase,
-)(RegistrationBase)
 
 export const SignUpLink = () => (
 	<p>
