@@ -1,10 +1,11 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import { Link } from "react-router-dom";
-import classes from "./Registration.module.css";
+import classes from "../Registration.module.css";
 import DefaultInput from "../../../components/ReusableComponents/DefaultInput";
 import PasswordInput from "../../../components/ReusableComponents/PasswordInput";
 import { RegistrationSchema } from "../../../config/yupConfig";
+import registrationStore from "../RegistrationStore";
 export default function GeneralInfo() {
   return (
     <div>
@@ -59,13 +60,10 @@ export default function GeneralInfo() {
                 errors={errors}
                 touched={touched}
               />
-              <p className={classes["have-account"]}>
-                Уже есть учетная запись?{" "}
-                <Link to="/signin">Войдите сейчас.</Link>
-              </p>
             </Form>
           )}
         />
+        <button onClick={()=>registrationStore.changePage('1111')}></button>
       </div>
     </div>
   );

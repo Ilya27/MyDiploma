@@ -11,7 +11,9 @@ class RegistrationStore {
   @observable page = "general";
 //   @observable generalInfo = defaultGeneralInfoField;
   @action changePage = pageName => {
-    this.this.page = pageName;
+    console.log(pageName);
+    
+    this.page = pageName;
   };
 
 }

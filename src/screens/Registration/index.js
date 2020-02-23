@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import GeneralInfo from './components/GeneralInfo'
+import GeneralInfo from "./components/GeneralInfo";
 import registrationStore from "./RegistrationStore";
 import classes from "./Registration.module.css";
 import { Link } from "react-router-dom";
 import Checkbox from "../../components/ReusableComponents/Checkbox";
 import data from "../../components/constants/data";
 import PaymentForm from "../../components/CreditCard";
-
+import { observer } from "mobx-react";
+@observer
 class Registration extends Component {
   state = {
     imageSrc: ""
@@ -28,6 +29,8 @@ class Registration extends Component {
     switch (name) {
       case "general":
         return <GeneralInfo />;
+      case "1111":
+        return null;
 
       default:
         return <GeneralInfo />;
