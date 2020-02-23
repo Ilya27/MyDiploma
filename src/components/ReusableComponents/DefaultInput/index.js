@@ -11,6 +11,7 @@ const DefaultInput = (props) => (
 			className={classes.input + (props.errors[props.name] && props.touched[props.name] ? ` ${classes["is-invalid"]}` : '')}
 			name={props.name}
 			type={props.type}
+			pattern={props.pattern && props.pattern}
 		/>
 		{props.errors[props.name] && props.touched[props.name] && (
 			<div className={classes.error}>{props.errors[props.name]}</div>

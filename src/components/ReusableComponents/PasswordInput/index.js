@@ -13,7 +13,7 @@ class PasswordInput extends Component {
 	}
 
 	render() {
-		const showPassword = this.state.showPassword ? 'eye-slash' : 'eye';
+		const showPassword = this.state.showPassword ? 'eye' : 'eye-slash';
 		return (
 			<div className={classes["input-wrapper"]}>
 				<label htmlFor={this.props.id} className={classes.label}>{this.props.label}</label>
