@@ -1,29 +1,33 @@
 .input-wrapper {
-	position: relative;
-	text-align: left;
-	margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.input-wrapper input {
+  margin-bottom: 0;
 }
 
 .label {
-	display: block;
-	margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .input {
-	width: 100%;
-	padding: 8px;
-	min-height: 40px;
-	border: 1px solid #cfd7de;
-	border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  min-height: 40px;
+  border: 1px solid #cfd7de;
+  border-radius: 4px;
 }
 
 .is-invalid {
-	border: 1px solid #e5281a;
+  border: 1px solid #e5281a;
 }
 
 .error {
-	position: absolute;
-	top: 100%;
-	font-size: 14px;
-	color: #e5281a;
+  position: absolute;
+  top: 100%;
+  font-size: 14px;
+  color: #e5281a;
 }

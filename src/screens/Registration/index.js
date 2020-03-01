@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import GeneralInfo from "./components/GeneralInfo";
+import AddressInfo from "./components/AddressInfo";
+import PaymentInfo from "./components/PaymentInfo";
+import Services from "./components/Services";
 import registrationStore from "./RegistrationStore";
 import classes from "./Registration.module.css";
 import { Link } from "react-router-dom";
 import Checkbox from "../../components/ReusableComponents/Checkbox";
 import data from "../../components/constants/data";
-import PaymentForm from "../../components/CreditCard";
 import { observer } from "mobx-react";
 @observer
 class Registration extends Component {
@@ -29,8 +31,12 @@ class Registration extends Component {
     switch (name) {
       case "general":
         return <GeneralInfo />;
-      case "1111":
-        return null;
+      case "address":
+        return <AddressInfo />;
+      case "paymentInfo":
+        return <PaymentInfo />;
+      case "services":
+        return <Services />;
 
       default:
         return <GeneralInfo />;

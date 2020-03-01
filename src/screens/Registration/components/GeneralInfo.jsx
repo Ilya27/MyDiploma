@@ -1,11 +1,11 @@
 import React from "react";
-import { Formik, Form } from "formik";
-import { Link } from "react-router-dom";
-import classes from "../Registration.module.css";
+import { Formik, Form, Field } from "formik";
 import DefaultInput from "../../../components/ReusableComponents/DefaultInput";
 import PasswordInput from "../../../components/ReusableComponents/PasswordInput";
-import { RegistrationSchema } from "../../../config/yupConfig";
+import { GeneralInfoSchema } from "../../../config/yupConfig";
 import registrationStore from "../RegistrationStore";
+import classes from "../Registration.module.css";
+import "../pretty-checkbox.min.css";
 export default function GeneralInfo() {
   return (
     <div>
@@ -15,16 +15,17 @@ export default function GeneralInfo() {
           initialValues={{
             firstName: "",
             lastName: "",
-            city: "",
-            salary: 10,
-            checkboxes: [],
-            dogSizes: [],
             email: "",
             password: "",
-            repeatPassword: ""
+            repeatPassword: "",
+            role: ""
           }}
-          validationSchema={RegistrationSchema}
-          onSubmit={(values, { resetForm }) => {}}
+          validationSchema={GeneralInfoSchema}
+          onSubmit={(values, { resetForm }) => {
+            if (values.role === "SITTER")
+              registrationStore.changePage(values, "services");
+            else registrationStore.changePage(values, "address");
+          }}
           render={({ errors, touched }) => (
             <Form>
               <DefaultInput
@@ -60,10 +61,33 @@ export default function GeneralInfo() {
                 errors={errors}
                 touched={touched}
               />
+              <label
+                htmlFor="role"
+                style={{ display: "block", textAlign: "left" }}
+              >
+                Я регистрируюсь как...
+              </label>
+              <div className="pretty p-default p-round p-thick">
+                <Field type="radio" name="role" value="SITTER" />
+                <div className="state p-success-o">
+                  <label> человек, который сидит с собакой</label>
+                </div>
+              </div>
+              <div className="pretty p-default p-round p-thick">
+                <Field type="radio" name="role" value="FINDER" />
+                <div className="state p-success-o">
+                  <label> человек, который ищет сиделку</label>
+                </div>
+              </div>
+              {errors.role && touched.role && (
+                <div className={classes["role-error"]}>{errors.role}</div>
+              )}
+              <button type="submit" className={classes.btn}>
+                Следующий шаг
+              </button>
             </Form>
           )}
         />
-        <button onClick={()=>registrationStore.changePage('1111')}></button>
       </div>
     </div>
   );

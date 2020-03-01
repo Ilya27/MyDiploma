@@ -15,24 +15,24 @@ function equalTo(ref, msg) {
 }
 Yup.addMethod(Yup.string, "equalTo", equalTo);
 
-export const RegistrationSchema = Yup.object().shape({
+export const GeneralInfoSchema = Yup.object().shape({
   firstName: Yup.string()
     .required("Обязательное поле")
-    .matches(/^[a-zA-Z]+$/, {
+    .matches(/^[а-яА-Я]+$/, {
       message: "Пожалуйста, укажите правильное имя."
     }),
   lastName: Yup.string()
     .required("Обязательное поле")
-    .matches(/^[a-zA-Z]+$/, {
+    .matches(/^[а-яА-Я]+$/, {
       message: "Пожалуйста, укажите правильную фамилию."
     }),
-  city: Yup.string().required("Required"),
-  salary: Yup.number()
-    .min(10, "Minimal salary is 10$")
-    .max(100, "Maximum salary is 100$")
-    .required("Обязательное поле"),
-  checkboxes: Yup.array().required("At least one service is required"),
-  dogSizes: Yup.array().required("At least one size is required"),
+  // city: Yup.string().required("Required"),
+  // salary: Yup.number()
+  //   .min(10, "Minimal salary is 10$")
+  //   .max(100, "Maximum salary is 100$")
+  //   .required("Обязательное поле"),
+  // checkboxes: Yup.array().required("At least one service is required"),
+  // dogSizes: Yup.array().required("At least one size is required"),
   email: Yup.string()
     .email("Пожалуйста, укажите действительный email.")
     .required("Обязательное поле"),
@@ -42,7 +42,20 @@ export const RegistrationSchema = Yup.object().shape({
   repeatPassword: Yup.string()
     .min(8, "Пароль должен быть длиннее 8 символов")
     .equalTo(Yup.ref("password"), "Пароли должны совпадать")
-    .required("Обязательное поле")
+    .required("Обязательное поле"),
+  role: Yup.string().required("Обязательное поле")
+});
+
+export const AddressSchema = Yup.object().shape({
+  city: Yup.string().required("Обязательное поле"),
+  location: Yup.string().required("Обязательное поле")
+});
+
+export const PaymentInfoSchema = Yup.object().shape({
+  number: Yup.string().required("Обязательное поле"),
+  month: Yup.number().required("Обязательное поле"),
+  year: Yup.number().required("Обязательное поле"),
+  cvc: Yup.number().required("Обязательное поле")
 });
 
 export const SearchSchema = Yup.object().shape({

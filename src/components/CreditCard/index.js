@@ -16,7 +16,7 @@ export default class PaymentForm extends Component {
     expiry: "",
     cvc: "",
     issuer: "",
-    focused: "",
+    focused: "" ,
     formData: null
   };
 
@@ -45,7 +45,7 @@ export default class PaymentForm extends Component {
   };
 
   render() {
-    const { name, number, expiry, cvc, focused} = this.state;
+    const { name, number, expiry, cvc, focused } = this.state;
     return (
       <div key="Payment">
         <div className="App-payment">
@@ -68,7 +68,6 @@ export default class PaymentForm extends Component {
                 onChange={this.handleInputChange}
                 onFocus={this.handleInputFocus}
               />
-              <small>E.g.: 49..., 51..., 36..., 37...</small>
             </div>
             <div className="input-wrapper">
               <input

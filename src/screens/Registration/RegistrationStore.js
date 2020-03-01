@@ -1,21 +1,23 @@
 import { action, observable } from "mobx";
-// const defaultGeneralInfoField = {
-//   firstName: "",
-//   lastName: "",
-//   email: "",
-//   password: "",
-//   repeatPassword: ""
-// };
+import ourService from "../../services/ourService";
 
 class RegistrationStore {
   @observable page = "general";
-//   @observable generalInfo = defaultGeneralInfoField;
-  @action changePage = pageName => {
-    console.log(pageName);
-    
+  @observable fields = {};
+  @action changePage = (fields, pageName) => {
+    this.fields = { ...fields, ...this.fields };
     this.page = pageName;
   };
 
+  @action registration = async fields => {
+    this.fields = { ...fields, ...this.fields };
+    try {
+      const answer = await ourService.registration(this.fields);
+      console.log(answer);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 }
 
 const registrationStore = new RegistrationStore();
