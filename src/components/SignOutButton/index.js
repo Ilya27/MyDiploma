@@ -1,13 +1,16 @@
-import React from 'react';
-import classes from './SignOutButton.module.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import classes from "./SignOutButton.module.css";
+import userStore from "../../store/UserStore";
 
-import { withFirebase } from '../../config/Firebase';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const SignOutButton = () => (
+  <button
+    type="button"
+    onClick={() =>userStore.logout()}
+    className={classes.btn}
+  >
+    <FontAwesomeIcon icon="user-times" /> Sign Out
+  </button>
+);
 
-const SignOutButton = ({ firebase }) => (
-	<button type="button" onClick={firebase.doSignOut} className={classes.btn}>
-		<FontAwesomeIcon icon="user-times" /> Sign Out
-	</button>
-  );
-  
-  export default withFirebase(SignOutButton);
+export default SignOutButton;

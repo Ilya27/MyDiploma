@@ -1,5 +1,5 @@
 import React from "react";
-import { Formik, Form  } from "formik";
+import { Formik, Form } from "formik";
 import DefaultInput from "../../../components/ReusableComponents/DefaultInput";
 import { AddressSchema } from "../../../config/yupConfig";
 import registrationStore from "../RegistrationStore";

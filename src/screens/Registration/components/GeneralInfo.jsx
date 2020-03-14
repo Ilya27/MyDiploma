@@ -6,6 +6,7 @@ import { GeneralInfoSchema } from "../../../config/yupConfig";
 import registrationStore from "../RegistrationStore";
 import classes from "../Registration.module.css";
 import "../pretty-checkbox.min.css";
+import ourService from "../../../services/ourService";
 export default function GeneralInfo() {
   return (
     <div>

@@ -51,6 +51,33 @@ class OurService {
       throw error;
     }
   };
+
+  login = async params => {
+    try {
+      const answer = await instance.post(`/auth/authorize`, params);
+      return answer.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  logout = async () => {
+    try {
+      const answer = await instance.delete("/auth/logout");
+      return answer.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  checkEmail = async email => {
+    try {
+      const answer = await instance.get("/auth/check-email", { email: email });
+      return answer.data;
+    } catch (error) {
+      throw error;
+    }
+  };
 }
 
 export default new OurService();

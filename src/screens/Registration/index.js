@@ -1,14 +1,15 @@
 import React, { Component } from "react";
+import { observer } from "mobx-react";
+import { Link } from "react-router-dom";
 import GeneralInfo from "./components/GeneralInfo";
 import AddressInfo from "./components/AddressInfo";
 import PaymentInfo from "./components/PaymentInfo";
 import Services from "./components/Services";
 import registrationStore from "./RegistrationStore";
 import classes from "./Registration.module.css";
-import { Link } from "react-router-dom";
 import Checkbox from "../../components/ReusableComponents/Checkbox";
 import data from "../../components/constants/data";
-import { observer } from "mobx-react";
+import AuthHOC from '../../shared/AuthHOC/AuthHOC'
 @observer
 class Registration extends Component {
   state = {
@@ -79,4 +80,4 @@ export const SignUpLink = () => (
   </p>
 );
 
-export default Registration;
+export default  AuthHOC(Registration);

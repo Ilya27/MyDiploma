@@ -1,6 +1,7 @@
 import { action, observable } from "mobx";
 import ourService from "../../services/ourService";
-
+import userStore from "../../store/UserStore";
+import signInStore from "../SignIn/SignInStore";
 class RegistrationStore {
   @observable page = "general";
   @observable fields = {};
@@ -10,10 +11,13 @@ class RegistrationStore {
   };
 
   @action registration = async fields => {
-    this.fields = { ...fields, ...this.fields };
+    const regFields = { ...fields, ...this.fields };
     try {
-      const answer = await ourService.registration(this.fields);
-      console.log(answer);
+      const answer = await ourService.registration(regFields);
+      signInStore.submitDefault({
+        email: answer.email,
+        password: regFields.password
+      });
     } catch (error) {
       console.log(error);
     }

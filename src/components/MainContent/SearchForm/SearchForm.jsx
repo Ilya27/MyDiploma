@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Formik, Form, Field } from "formik";
 import Checkbox from "./../../ReusableComponents/Checkbox";
 import ButtonGroup from "./../../ReusableComponents/ButtonGroup/ButtonGroup";
@@ -35,10 +35,10 @@ library.add(
 
 const SearchForm = props => {
   return (
-    <>
+    <Fragment>
       <div className={classes.searchFormContainer}>
         <Formik
-          initialValues={props.searchParam}
+          initialValues={{ services: [], dogSizes: [] }}
           validationSchema={SearchSchema}
           onSubmit={values => {}}
         >
@@ -258,13 +258,13 @@ const SearchForm = props => {
                     <div>
                       <div>My Dog Size</div>
                       <div className={classes.dogSizeAndWeights}>
-                        {data.weights.map(data => (
+                        {data.weights.map(item => (
                           <Checkbox
                             name="dogSizes"
-                            value={data.dogSize}
-                            box="dogSizes"
-                            text={data.weight}
-                            key={Math.random()}
+                            value={item.dogSize}
+                            text={item.weight}
+                            box={classes["box-dog"]}
+                            key={item.dogSize}
                           />
                         ))}
                       </div>
@@ -279,7 +279,7 @@ const SearchForm = props => {
           }}
         </Formik>
       </div>
-    </>
+    </Fragment>
   );
 };
 
