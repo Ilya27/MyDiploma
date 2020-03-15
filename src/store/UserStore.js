@@ -12,11 +12,11 @@ class UserStore {
   
 
   @action logout = async (makeApiLogout = true) => {
-    this.User = null;
-    localStorage.removeItem("user");
     if (makeApiLogout) {
       await ourService.logout();
     }
+    this.User = null;
+    localStorage.removeItem("user");
   };
 
   //   @action getInfo = async () => {

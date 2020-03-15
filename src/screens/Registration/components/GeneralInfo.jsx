@@ -22,10 +22,15 @@ export default function GeneralInfo() {
             role: ""
           }}
           validationSchema={GeneralInfoSchema}
-          onSubmit={(values, { resetForm }) => {
-            if (values.role === "SITTER")
-              registrationStore.changePage(values, "services");
-            else registrationStore.changePage(values, "address");
+          onSubmit={async (values, { resetForm }) => {
+            const answer = await ourService.checkEmail(values.email);
+            if (answer === 200) {
+              if (values.role === "SITTER")
+                registrationStore.changePage(values, "services");
+              else registrationStore.changePage(values, "address");
+            } else {
+              console.log("Email already exists");
+            }
           }}
           render={({ errors, touched }) => (
             <Form>

@@ -24,10 +24,12 @@ instance.interceptors.response.use(
 instance.interceptors.request.use(
   function(config) {
     config.headers["Content-Type"] = "application/json";
-    // const token = tokenStore.token;
-    // if (token) {
-    //   config.headers["Access-Token"] = token;
-    // }
+    const token =
+      JSON.parse(localStorage.getItem("user")) &&
+      JSON.parse(localStorage.getItem("user")).token;
+    if (token) {
+      config.headers["Access-Token"] = token;
+    }
     return config;
   },
   function(error) {

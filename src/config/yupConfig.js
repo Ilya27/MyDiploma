@@ -15,6 +15,22 @@ function equalTo(ref, msg) {
 }
 Yup.addMethod(Yup.string, "equalTo", equalTo);
 
+function notEqualTo(ref, msg) {
+  return Yup.mixed().test({
+    name: "notEqualTo",
+    exclusive: false,
+    message: msg || "Новый пароль не должен быть равен старому.",
+    params: {
+      reference: ref.path
+    },
+    test: function(value) {
+      return value !== this.resolve(ref);
+    }
+  });
+}
+Yup.addMethod(Yup.string, "notEqualTo", notEqualTo);
+
+
 export const GeneralInfoSchema = Yup.object().shape({
   firstName: Yup.string()
     .required("Обязательное поле")
@@ -75,22 +91,28 @@ export const ForgetSchema = Yup.object().shape({
 });
 
 export const ChangeSchema = Yup.object().shape({
-  passwordOne: Yup.string().required("Required"),
-  passwordTwo: Yup.string()
-    .oneOf([Yup.ref("passwordOne"), null], "Passwords must similar")
-    .required("Required"),
+  passwordOne: Yup.string().required("Обязательное поле"),
+  newPasswordTwo: Yup.string()
+    .oneOf([Yup.ref("newPassword"), null], "Пароли должны совпадать")
+    .required("Обязательное поле"),
   newPassword: Yup.string()
-    .min(8, "Must be longer than 8 characters")
-    .required("Required")
+    .min(8, "Пароль должен быть длиннее 8 символов")
+    .required("Обязательное поле")
+    .notEqualTo(Yup.ref("passwordOne"), "Новый пароль не должен быть равен старому")
 });
 
-export const InfoChangeSchema = Yup.object().shape({
-  city: Yup.string().required("Required"),
+export const InfoChangeSchemaSitter = Yup.object().shape({
+  city: Yup.string().required("Обязательное поле"),
+  location: Yup.string().required("Обязательное поле"),
   salary: Yup.number()
-    .min(10, "Minimal salary is 10$")
-    .max(100, "Maximum salary is 100$")
-    .required("Required"),
-  checkboxes: Yup.array().required("At least one service is required"),
-  dogSizes: Yup.array().required("At least one size is required"),
-  daysOfTheWeek: Yup.array().required("At least one size is required")
+    .min(10, "Минимальный оклад - 10")
+    .max(100, "Максимальный оклад - 100")
+    .required("Обязательное поле"),
+  services: Yup.array().required("Требуется хотя бы одна услуга"),
+  dogSizes: Yup.array().required("Требуется хотя бы один размер")
+});
+
+export const InfoChangeSchemaFinder = Yup.object().shape({
+  city: Yup.string().required("Обязательное поле"),
+  location: Yup.string().required("Обязательное поле")
 });

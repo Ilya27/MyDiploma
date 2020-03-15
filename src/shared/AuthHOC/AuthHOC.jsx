@@ -10,34 +10,14 @@ export default function Auth(WrappedComponent) {
       const { pathname } = this.props.location;
       const isLoginPage =
         pathname === "/signin" || pathname === "/registration";
-
-      console.log(isLoginPage);
-      console.log(userStore.User);
-
+      const isUserPage = pathname === "/account";
       if (userStore.User && isLoginPage) {
         return <Redirect to="/" />;
       }
-      //   const isProfilePage = pathname.split("/")[1] === "profile";
-      //   const isHomePage = pathname === "/";
 
-      //   if (!globalStore.User && isProfilePage) {
-      //     return <Redirect to="/login" />;
-      //   }
-
-      //   if (globalStore.User && isLoginPage && !state) {
-      //     return <Redirect to="/profile/my-projects" />;
-      //   }
-
-      //   if (globalStore.User && isLoginPage && state) {
-      //     return <Redirect to={state.prevPath} />;
-      //   }
-
-      //   if (globalStore.User && isHomePage) {
-      //     return <Redirect to="/profile/my-projects" />;
-      //   }
-      //   if (!globalStore.User && isHomePage) {
-      //     return <Redirect to="/create-project/style" />;
-      //   }
+      if (!userStore.User && isUserPage) {
+        return <Redirect to="/" />;
+      }
 
       return <WrappedComponent {...this.props} />;
     }

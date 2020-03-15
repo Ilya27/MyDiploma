@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { toast } from "react-toastify";
+import defaultUser from '../../images/defaultUser.png'
 import classes from "./ProfileImageChange.module.css";
 
 class ProfileImageChange extends Component {
@@ -28,7 +29,7 @@ class ProfileImageChange extends Component {
       <div className={classes["profile-image-change-wrapper"]}>
         <h1 className={classes.h1}>
           <img
-            src={`${this.state.photo}`}
+            src={defaultUser}
             alt="pic"
             className={classes.avatar}
           />
