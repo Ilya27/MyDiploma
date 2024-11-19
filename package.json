@@ -8,7 +8,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "antd": "^3.18.2",
-    "firebase": "^5.10.0",
+    "firebase": "^10.9.0",
     "formik": "^1.5.3",
     "react": "^16.8.6",
     "react-credit-card-primitives": "^1.5.1",
